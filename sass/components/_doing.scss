@@ -1,0 +1,52 @@
+.section-doing {
+    padding-top: 0px;
+    margin-bottom: 94px;
+
+    @media screen and (max-width: $desktop - 1 ) {
+        display: none;
+    }
+}
+
+.list-doing {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.item-doing {
+    margin-right: 30px;
+    position: relative;
+    
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.doing-description {
+    display: block;
+    padding-top: 30px;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+  
+    background: rgba(47, 48, 58, 0.8);
+    color: $white-color;
+    @include font(700);
+      
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(100% );
+    transition: 250ms;
+    overflow: hidden;
+    
+  }
+
+  .item-doing:hover .doing-description{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    opacity: 1;
+    transform: translateY(0);
+}

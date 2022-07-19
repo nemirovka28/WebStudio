@@ -1,0 +1,180 @@
+footer {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  
+    background-color: $secondary-background-color;
+  }
+  /*---------Text color--------------*/
+  .fontslogo-footer{
+    color:$accent-color;
+    @include font (700, 26px, 31px,0.03em);
+    font-family: 'Raleway';
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  .logo-fot{
+    color:$white-color;
+    @include font (700, 26px, 31px,0.03em);
+    font-family: 'Raleway';
+    text-decoration: none;
+}
+.address.primary{
+    color:$white-color;
+    @include font (400, 14px, 24px,0.03em);
+    text-decoration: none;
+}
+.address{
+    color:$primary-text-color;
+    @include font (400, 14px, 24px,0.03em);
+    text-decoration: none;
+}
+.social-list.footer{
+    padding: 0;
+    margin: 0;
+}
+.footer-call{
+    padding: 0;
+    margin: 0;
+    padding-bottom: 20px;
+    color:$white-color;
+    @include font (700, 14px, 16px,0.03em);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ /*---------Text color--------------*/
+ .social-link.footer {
+    fill: $white-color;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-bottom: 60px;
+    &:hover,
+    &:focus {
+      background: $accent-color;
+    }
+  }
+
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width:$desktop) {
+        flex-direction: row;
+        
+    }
+   
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-direction: row;
+    }
+    @media screen and (min-width:$desktop) {
+       align-items: center;
+    }
+
+}
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+   
+    
+    &:not(:last-child) {
+        @media screen and (min-width: $tablet) {
+          margin-right: 165px;
+        }
+    
+        @media screen and (min-width: $desktop) {
+          margin-right: 70px;
+        }
+      }
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 0px;
+        text-align: start;
+      }
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 60px;
+    @media screen and (min-width:$desktop) {
+        margin-bottom: 0px; 
+    }
+}
+
+.footer-list > li{
+    padding-bottom: 8px;
+    &:nth-last-child(){
+        padding-bottom: 0px;
+    }
+    
+}
+.footer-subscribe{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        margin-left: auto;
+        align-items: flex-start;
+        width: 570px;
+        margin-bottom: 55px;
+      }
+}
+
+.form-field.footer{
+    display:flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    @media screen and (min-width:$desktop) {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: row;
+    }
+   
+}
+.footer-input{
+    height: 50px;
+    width: 100%;
+}
+.button-footer{
+    display: flex ;
+    
+    justify-content: center;
+    padding: 15px;
+    text-decoration: none;
+
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+
+    width: 200px;
+    height: 50px;
+
+    color: $white-color;
+    @include font (500,14px)
+    
+    &:hover,
+    &:focus {
+      background-color: $buton-hover-color;
+      color:$white-color;
+    }
+
+}
+
+.subscribe-icon{
+    margin-left: 10px;
+    fill: $white-color;
+}

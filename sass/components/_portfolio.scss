@@ -1,0 +1,148 @@
+.list.filter {
+    display: flex;
+    flex-wrap: wrap;
+ 
+    margin-top: 94px;
+    margin-bottom: 50px;
+  
+    justify-content: center;
+    @media screen and (max-width:$tablet - 1px) {
+       
+        justify-content: flex-start;
+    }
+  }
+  
+.list.filter > li:not(:last-child) {
+    margin-right: 8px;
+
+    @media screen and (max-width:$tablet - 1px) {
+        padding-bottom: 15px;
+        align-items: flex-start;
+    }
+  }
+
+.filter-button {
+    padding: 6px 22px;
+    text-align: center;
+    @include font (500, 16px, 1.62, 0.03em);
+    
+    color: $title-text-color;
+      
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    border-style: none;
+    cursor: pointer;
+    transition: all $timing-function;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover,
+         :focus{
+        background-color: $accent-color;
+        color: $white-color;
+      }
+  }
+  /*--------------------------------------------------------*/
+  .list.projects {
+    @extend %list;
+    margin: -15px;
+   
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-wrap: wrap;        
+    }
+  }
+
+.project{
+    margin: 15px;
+    width: 354px;
+    height: 100%;
+    box-sizing: border-box;   
+    background-color: $white-color;
+    border: 1px solid #EEEEEE;
+    background-color: #F5F4FA;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 1px 1px 4px 4px;
+  
+
+    @media screen and (min-width:$tablet) {
+        width: calc((100% - 2 *30px) / 2);
+    }
+    @media screen and (min-width:$desktop) {
+        width: calc((100% - 3 *30px) / 3);
+    }
+}
+ .portfolio-description .work-title {
+    margin-bottom: 4px;
+    text-align: left;
+  
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  .project-description {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  
+    font-size: 16px;
+    line-height: 1.87;
+    color: $title-text-color;
+  }
+  
+  .section.portfolio {
+
+    padding-top: 94px;
+    padding-bottom: 64px;
+  }
+  
+  .portfolio-description {
+
+    padding: 15px 24px;
+    background-color:#FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+
+  }
+  
+  .image-content {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 500ms;
+  
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 63px 24px;
+    overflow: hidden;
+  
+    background: rgba(33, 150, 243, 0.9);
+    color:#FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+  }
+  
+  .projects a:hover .image-text,
+  .projects a:focus .image-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .work-title {
+    @extend %title;
+    margin-bottom: 4px;
+    text-align: left;
+  
+    @include font(700, 18px, 2, 0.06em);
+    
+  }

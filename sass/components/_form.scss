@@ -1,0 +1,216 @@
+.form-title {
+  display: block;
+  margin-bottom: 12px;
+  text-align: center;
+
+  @include font(700, 20px, 1.5);
+
+  color: $title-text-color;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+
+  &.textarea {
+    margin-bottom: 20px;
+  }
+
+  label {
+    margin-bottom: 4px;
+  }
+
+  &.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0px;
+
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+    }
+  }
+}
+
+.form-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding-left: 42px;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.footer-input {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  padding-left: 16px;
+
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: $white-color;
+
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0px;
+  }
+}
+
+textarea {
+  box-sizing: border-box;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-left: 0;
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+
+  &:focus {
+    outline: transparent;
+    border-color: $accent-color;
+    transition: border-color $timing-function;
+  }
+}
+
+.form-label {
+  @include font(400, 12px, 1.17, 0.01em);
+
+  color: $primary-text-color;
+  cursor: pointer;
+}
+
+.label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.accept {
+  display: inline-flex;
+  margin-bottom: 30px;
+  font-size: 12px;
+  letter-spacing: 0.025em;
+}
+
+.accept-link {
+  display: inline;
+  text-decoration: underline;
+  margin-left: 4px;
+  color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .accept {
+    font-size: 14px;
+  }
+}
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked ~ .check-icon {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+.check-svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked ~ .check-svg {
+  opacity: 1;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.accept-link{
+  text-decoration: underline;
+  color: $buton-hover-color;
+}
+
+.form-field textarea::placeholder {
+  @include font($letter-spacing: 0.03em);
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.button-modal{
+  width: 200px;
+  height: 50px;
+  background-color: $buton-hover-color ;
+  color: $white-color;
+  padding: 10px 55px;
+  @include font(700, 16px, 1.17, 0.06em);
+  border:none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.form-icon {
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  transition: fill $timing-function;
+
+  .form-input:focus ~ & {
+    fill: $accent-color;
+  }
+}
+
+.form-input:focus {
+  outline: transparent;
+  border-color: $accent-color;
+  transition: border-color $timing-function;
+}
